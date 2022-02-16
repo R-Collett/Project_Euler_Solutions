@@ -1,17 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 28 18:07:22 2022
+Created on Fri Jan 28 13:19:54 2022
 
 @author: roryc
 
-2520 is the smallest number that can be divided by each of the numbers from 1 
-to 10 without any remainder.
+All prime numbers satisfy the condition that they are equal to 6n+1 or 6n-1. But how can we use
+these identities to generate primes instead? #
 
-What is the smallest positive number that is evenly divisible by all of the 
-numbers from 1 to 20?
+This is a test of my hypothesis, that if n satisfies the condition that (n-1)/5 or (n-1)/7 is an integer number,
+then that calculation of 6n-1/6n+1 respectively is not a prime number.
 
-~~~~~~~~ Project Euler Challenge 5 ~~~~~~~~
+This is accurate up to 323, where factors of 19 mess it all up!
+
+The shortcomings of this algorithm, present themselves as the multiples of prime numbers, which we would have to check separately. To further this algorithm beyond
+this limit, we would have to check whether each number is divisble by the prime numbers established before it. This is laborious, and I don't require it for my
+uses, as I'm looking for prime numbers below 20.
+
+~~~~~~~~ Personal Challenge to Generate Prime Numbers ~~~~~~~~
 """
+
+#Let's try and generate all the prime numbers up to 100.
 
 import math
 import numpy as np
@@ -20,6 +28,8 @@ def generate_primes_to(max_integer):
     # Keep arrays separate to remove the terms accorrding to conditions outlined in header of code.
     number_array_add = np.array(range( 1, math.floor(max_integer/6)+1, 1))
     number_array_subtract = np.array(range( 1, math.floor(max_integer/6)+1, 1))
+
+    
     # For 6n+1 terms represented in number_array_add, every n value which satisfies (n-1)/7 = integer must be deleted.
 
     deletion_index = np.array([],dtype='int32')
@@ -38,24 +48,4 @@ def generate_primes_to(max_integer):
     total_prime_array = sorted(np.append(total_prime_array, [2, 3]))
     return total_prime_array
 
-# Generating the primes does most of the heavy lifting, the next step just involves repeating the prime numbers until we exceed the limit. In this case, 20.
-
-multiply_up_to = 20
-prime_array = np.array(generate_primes_to(multiply_up_to))
-other_factor_array = np.array([])
-
-for x in prime_array:
-    for i in range(2, math.floor(math.log2(multiply_up_to)) + 1, 1):
-        if x**i <= multiply_up_to:
-            other_factor_array = np.append(other_factor_array, x)
-        else:
-            break
-
-minimum_factor_array = np.array(sorted(np.append(prime_array, other_factor_array)))
-multiple_of_all = 1
-print(minimum_factor_array)
-
-for x in minimum_factor_array:
-    multiple_of_all = multiple_of_all*x
-
-print("minimum evenly divisible number by numbers 1->20 =", multiple_of_all)
+print(generate_primes_to(20))
