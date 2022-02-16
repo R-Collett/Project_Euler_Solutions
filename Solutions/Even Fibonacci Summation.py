@@ -10,11 +10,6 @@ them all together.
 ~~~~~~~~ Project Euler Challenge 2 ~~~~~~~~
 """
 
-import sys
-
-print("This is the part to pay attention to:")
-print(sys.version)
-
 def next_fib_pair(n):
     # Function to calculate the next pair of fibonacci sequence numbers with
     # an even number

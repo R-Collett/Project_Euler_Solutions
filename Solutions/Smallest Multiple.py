@@ -34,10 +34,12 @@ def find_prime_factors(input_integer):
         np.append( prime_factor_array, input_integer )
         
     end = False
+    old_size = 0
+
     while(end == False):
         
+        print("Prime Factor Array = ", prime_factor_array)
         new_size = np.size(prime_factor_array)
-        old_size = 0
         for i in range(np.size(prime_factor_array)):
             for j in prime_factor_array:    
                 if(prime_factor_array[i] % j == 0 and prime_factor_array[i] != j):
