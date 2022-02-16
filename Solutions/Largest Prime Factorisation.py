@@ -4,9 +4,9 @@ Created on Fri Jan 28 15:58:16 2022
 
 @author: roryc
 
-Find the largest prime factor of 600851475143 
-
 ~~~~~~~~ Project Euler Challenge 3 ~~~~~~~~
+
+Find the largest prime factor of 600851475143 
 """
 
 import math

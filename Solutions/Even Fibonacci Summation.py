@@ -4,10 +4,11 @@ Created on Fri Jan 28 13:19:54 2022
 
 @author: roryc
 
+~~~~~~~~ Project Euler Challenge 2 ~~~~~~~~
+
 Program to identify all the even fibonnaci numbers below 4,000,000 and sum
 them all together.
 
-~~~~~~~~ Project Euler Challenge 2 ~~~~~~~~
 """
 
 def next_fib_pair(n):

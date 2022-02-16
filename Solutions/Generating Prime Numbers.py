@@ -4,6 +4,8 @@ Created on Fri Jan 28 13:19:54 2022
 
 @author: roryc
 
+~~~~~~~~ Personal Challenge to Generate Prime Numbers ~~~~~~~~
+
 All prime numbers satisfy the condition that they are equal to 6n+1 or 6n-1. But how can we use
 these identities to generate primes instead? #
 
@@ -16,7 +18,6 @@ The shortcomings of this algorithm, present themselves as the multiples of prime
 this limit, we would have to check whether each number is divisble by the prime numbers established before it. This is laborious, and I don't require it for my
 uses, as I'm looking for prime numbers below 20.
 
-~~~~~~~~ Personal Challenge to Generate Prime Numbers ~~~~~~~~
 """
 
 #Let's try and generate all the prime numbers up to 100.

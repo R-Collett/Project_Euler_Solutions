@@ -4,9 +4,9 @@ Created on Fri Jan 28 14:00:10 2022
 
 @author: roryc
 
-Program to identify the summation of all multiples of 3 OR 5, but not both, up to 1000
-
 ~~~~~~~~ Project Euler Challenge 1 ~~~~~~~~
+
+Program to identify the summation of all multiples of 3 OR 5, but not both, up to 1000
 """
 
 import math

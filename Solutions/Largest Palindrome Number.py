@@ -4,10 +4,10 @@ Created on Fri Jan 28 18:07:22 2022
 
 @author: roryc
 
+~~~~~~~~ Project Euler Challenge 4 ~~~~~~~~
+
 Find the largest palindrome number made from the product of two three
 digit numbers.  
-
-~~~~~~~~ Project Euler Challenge 4 ~~~~~~~~
 """
 
 import numpy as np
